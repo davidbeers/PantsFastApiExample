@@ -1,9 +1,14 @@
-python_sources()
+python_sources(
+    name="lib"
+)
 
 # 3rd party deps
 pex_binary(
     name="api-binary-deps",
     environment="docker_linux",
+    dependencies=[
+        ":lib",
+    ],
     layout="packed",
     execution_mode="venv",
     include_sources=False,
