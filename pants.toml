@@ -1,0 +1,38 @@
+[GLOBAL]
+pants_version = "2.19.0"
+backend_packages.add = [
+    "pants.backend.build_files.fmt.black",
+    "pants.backend.docker",
+    "pants.backend.python",
+    "pants.backend.python.lint.black",
+    "pants.backend.python.lint.flake8",
+    "pants.backend.python.lint.isort",
+    "pants.backend.python.typecheck.mypy",
+]
+
+[source]
+root_patterns = [
+    "/src/python",
+    "/src/docker"
+]
+
+[python]
+interpreter_constraints = ["==3.11.*"]
+enable_resolves = true
+
+[python-bootstrap]
+search_path = [
+    "<PYENV>"
+]
+
+[python-infer]
+# use the new, faster parser for dependency inference, available since v2.17
+use_rust_parser = true
+
+[environments-preview.names]
+local_linux = "//:local_linux"
+docker_linux = "//:docker_linux"
+
+[anonymous-telemetry]
+enabled = true
+repo_id = "b950b36b-3351-4da2-84b5-7f7d9cac6f50"

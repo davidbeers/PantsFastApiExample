@@ -1,1 +1,14 @@
+# IDE artifacts
 /.idea/
+/PantsFastApi.iml
+.vscode
+settings.json
+
+# Pants artifacts
+/dist/
+/.pants.d/
+
+# Python bytecode caches
+**/__pycache__/
+**/.pytest_cache/
+*.pyc
