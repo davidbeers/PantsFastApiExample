@@ -11,6 +11,7 @@
 //   "generated_with_requirements": [
 //     "cowsay==6.1",
 //     "fastapi==0.109.2",
+//     "gunicorn==21.2.0",
 //     "uvicorn[standard]==0.27.0.post1"
 //   ],
 //   "manylinux": "manylinux2014",
@@ -157,6 +158,31 @@
           "artifacts": [
             {
               "algorithm": "sha256",
+              "hash": "3213aa5e8c24949e792bcacfc176fef362e7aac80b76c56f6b5122bf350722f0",
+              "url": "https://files.pythonhosted.org/packages/0e/2a/c3a878eccb100ccddf45c50b6b8db8cf3301a6adede6e31d48e8531cab13/gunicorn-21.2.0-py3-none-any.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "88ec8bff1d634f98e61b9f65bc4bf3cd918a90806c6f5c48bc5603849ec81033",
+              "url": "https://files.pythonhosted.org/packages/06/89/acd9879fa6a5309b4bf16a5a8855f1e58f26d38e0c18ede9b3a70996b021/gunicorn-21.2.0.tar.gz"
+            }
+          ],
+          "project_name": "gunicorn",
+          "requires_dists": [
+            "eventlet>=0.24.1; extra == \"eventlet\"",
+            "gevent>=1.4.0; extra == \"gevent\"",
+            "importlib-metadata; python_version < \"3.8\"",
+            "packaging",
+            "setproctitle; extra == \"setproctitle\"",
+            "tornado>=0.2; extra == \"tornado\""
+          ],
+          "requires_python": ">=3.5",
+          "version": "21.2.0"
+        },
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
               "hash": "e3fe4ac4b851c468cc8363d500db52c2ead036020723024a109d37346efaa761",
               "url": "https://files.pythonhosted.org/packages/95/04/ff642e65ad6b90db43e668d70ffb6736436c7ce41fcc549f4e9472234127/h11-0.14.0-py3-none-any.whl"
             },
@@ -235,6 +261,24 @@
           "requires_dists": [],
           "requires_python": ">=3.5",
           "version": "3.6"
+        },
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
+              "hash": "8c491190033a9af7e1d931d0b5dacc2ef47509b34dd0de67ed209b5203fc88c7",
+              "url": "https://files.pythonhosted.org/packages/ec/1a/610693ac4ee14fcdf2d9bf3c493370e4f2ef7ae2e19217d7a237ff42367d/packaging-23.2-py3-none-any.whl"
+            },
+            {
+              "algorithm": "sha256",
+              "hash": "048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5",
+              "url": "https://files.pythonhosted.org/packages/fb/2b/9b9c33ffed44ee921d0967086d653047286054117d584f1b1a7c22ceaf7b/packaging-23.2.tar.gz"
+            }
+          ],
+          "project_name": "packaging",
+          "requires_dists": [],
+          "requires_python": ">=3.7",
+          "version": "23.2"
         },
         {
           "artifacts": [
@@ -672,6 +716,7 @@
   "requirements": [
     "cowsay==6.1",
     "fastapi==0.109.2",
+    "gunicorn==21.2.0",
     "uvicorn[standard]==0.27.0.post1"
   ],
   "requires_python": [

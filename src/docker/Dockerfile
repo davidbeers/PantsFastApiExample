@@ -10,5 +10,6 @@ FROM python:3.11-slim-bookworm
 COPY --from=deps /bin/app /bin/app
 COPY --from=srcs /bin/app /bin/app
 
-ENTRYPOINT ["/bin/app/pex"]
+#ENTRYPOINT ["/bin/app/bin/uvicorn", "api.main:app", "--proxy-headers", "--host", "0.0.0.0", "--port", "80"]
+ENTRYPOINT ["/bin/app/bin/gunicorn", "api.main:app", "--bind=0.0.0.0", "--timeout", "600", "--forwarded-allow-ips=*", "-k", "uvicorn.workers.UvicornWorker", "-w", "1"]
 EXPOSE 80
