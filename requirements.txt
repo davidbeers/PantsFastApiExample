@@ -1,4 +1,7 @@
 fastapi==0.109.2
 uvicorn[standard]==0.27.0.post1
+# only include gunicorn here if you need it. For running containers in AWS ECS, Fargate or Kubernetes you might not.
+# See also comments and options in src/docker/Dockerfile
 gunicorn==21.2.0
+# the one Python dependency we import in the service code
 cowsay==6.1

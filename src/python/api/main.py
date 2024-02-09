@@ -20,4 +20,4 @@ async def say_hello(name: str):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("api.main:app", reload=True)
+    uvicorn.run("api.main:app", port=8000, reload=True)
