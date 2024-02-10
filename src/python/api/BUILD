@@ -8,8 +8,8 @@ pex_binary(
     environment="docker_linux",
     dependencies=[
         ":lib",
-        "//:reqs#gunicorn",
-        "//:reqs#uvicorn"
+        "//:reqs#uvicorn",
+        # "//:reqs#gunicorn",  # if using gunicorn
     ],
     layout="packed",
     execution_mode="venv",
